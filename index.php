@@ -3,6 +3,7 @@
    <div id="main-area">
       <div id="content-wrapper">
          <div id="content">
+            Testing
             <?php while (have_posts()) : the_post();
                the_content('');
                endwhile; ?>
