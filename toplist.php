@@ -12,6 +12,7 @@
 <div id="site-wrapper">
    <div id="main-area-casinoliste">
       <div id="casinoliste-inner">
+         Testing
          <?php  
          //echo $is_dark;
          if( get_field('top_banner_switch') ){
