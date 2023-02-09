@@ -1,0 +1,77 @@
+@mixin setMaxWidthsWithMarginsLimitedWidth() {
+    width: 100%;
+    max-width: $maxWidth;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: $marginSmall;
+    padding-right: $marginSmall;
+    @media only screen and (min-width: $media-small) {
+        padding-left: $marginLargex;
+        padding-right: $marginLargex;
+    }
+    @media only screen and (min-width: $media-medlarge) {
+        padding-left: $marginLargexx;
+        padding-right: $marginLargexx;
+    }
+}
+
+@mixin setMaxWidthsWithMarginsLimitedLargeWidth() {
+    width: 100%;
+    max-width: $maxWidth;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: $marginTiny;
+    padding-right: $marginTiny;
+    @media only screen and (min-width: $media-small) {
+        padding-left: $marginSmallMed;
+        padding-right: $marginSmallMed;
+    }
+    @media only screen and (min-width: $media-medlarge) {
+        padding-left: $marginMedLarge;
+        padding-right: $marginMedLarge;
+    }
+}
+
+@mixin setMaxWidthsWithMarginsFullWidth() {
+    width: 100%;
+    max-width: $maxWidthLarge;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+@mixin setMaxWidthsWithMarginsMaxWidth() {
+    width: 100%;
+    max-width: $maxWidth;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+@mixin setMaxWidthsWithMarginsLimitedWidthFlexible() {
+    width: 100%;
+    position: relative;
+    padding-left: $marginSmall;
+    padding-right: $marginSmall;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $maxWidthLarge;
+    @media only screen and (min-width: $media-small) {
+        padding-left: $marginLargex;
+        padding-right: $marginLargex;
+    }
+    @media only screen and (min-width: $media-medlarge) {
+        padding-left: $marginLargexx;
+        padding-right: $marginLargexx;
+    }
+    @media only screen and (min-width: $media-largexx) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+#site-wrapper{
+    padding-top: var(--main-nav-height);
+}

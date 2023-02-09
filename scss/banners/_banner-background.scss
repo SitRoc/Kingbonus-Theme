@@ -1,0 +1,40 @@
+.banner-background{
+    background-repeat: no-repeat;
+    background-size: cover;
+    .banner-inner{
+        @include setMaxWidthsWithMarginsLimitedWidth();
+        padding-top: var(--space-100);
+        padding-bottom: var(--space-66);        
+    }
+    .banner-content{
+        width: 45%;
+        h1{
+            font-family: 'Basier Bold';
+            font-size: var(--fs-48);
+            padding-bottom: var(--space-28);
+        }
+        p{
+            font-size: var(--fs-26);
+            line-height: 1.5;
+            color: var(--color-dark-text-secondary);
+        }
+        &.light-text{
+            h1{
+                color: var(--color-text);
+            }
+            p{
+                color: var(--color-text-secondary);
+            }
+        }
+    }
+    &.slim{
+        .banner-inner{
+            padding-top: var(--space-66);
+            padding-bottom: 0; 
+        }
+        .banner-content{
+            width: 100%;
+            max-width: $media-medsmall;
+        }
+    }
+}

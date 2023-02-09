@@ -1,0 +1,14 @@
+section.faqs{
+    margin-top: var(--space-85);
+    .faq-container{
+        background-color: var(--color-background-highlight);
+        border-radius: var(--border-radius);
+        padding: var(--space-36) var(--space-36) var(--space-22);
+        margin-bottom: var(--space-22);
+        .question{
+            font-size: var(--fs-32);
+            font-family: 'Basier Bold';
+            margin-bottom: var(--space-16);
+        }
+    }
+}

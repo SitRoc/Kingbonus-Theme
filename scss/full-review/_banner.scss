@@ -1,0 +1,106 @@
+.f-r-banner{
+    color: var(--color-text);
+	font-size: 1rem;
+	padding: var(--space-66) 0;
+	background-color: var(--color-background-grey);
+	.f-r-banner-wrapper {
+		@include setMaxWidthsWithMarginsLimitedWidth();
+		display: flex;
+		flex-wrap: wrap;
+		.f-r-banner-logo-container{
+			margin-right: var(--space-66);
+			@media (max-width: $media-smallmx) {
+				flex: 0 0 100%;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: var(--space-18);
+			}
+			@media (min-width: $media-medium) {
+				margin-right: var(--space-145);
+			}
+			img{
+				border-radius: var(--border-radius);
+				margin-bottom: 0;
+				max-width: 150px !important;
+				max-height: 150px !important;
+				@media (min-width: $media-smallmx) {
+					margin-bottom: var(--space-80);
+					max-width: unset;
+					max-height: unset;
+				}
+			}
+		}
+		.f-r-banner-content-container{
+			flex: 0 0 100%;
+			@media (min-width: $media-smallmx) {
+				flex: 1;
+			}
+			.f-r-banner-content-title-features{
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				.f-r-banner-content-title-container{
+					@media (max-width: $media-medium) {
+						flex: 0 0 80%;
+						margin-bottom: var(--space-28);
+					}
+					h1{
+						font-family: 'Basier Bold';
+						font-size: var(--fs-60);
+						margin-bottom: var(--space-14);
+						.plus-18{
+							margin-left: var(--space-18);
+							width: var(--space-40);
+							height: var(--space-40);
+						}
+					}
+					.f-r-banner-content-title-rating-container{
+						display: flex;
+						align-items: center;
+						.rating{
+							font-size: var(--fs-26);
+							color: var(--color-text-secondary);
+							margin-left: var(--space-18);
+						}
+					}
+				}
+				.casino-features-review{
+					.feature-review{
+						display: flex;
+						margin-bottom: var(--space-8);
+						img{
+							margin-right: var(--space-8);
+						}
+					}
+				}
+			}
+			.bonus-features{
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				margin-top: var(--space-66);
+				.freespins-info{
+					display: flex;
+					flex-direction: column;
+					@media (max-width: $media-small) {
+						flex: 0 0 50%;
+						margin-bottom: var(--space-40);
+					}
+					.offer-title{
+						text-transform: uppercase;
+						font-family: 'Basier Bold';
+						font-size: var(--fs-12);
+						color: var(--color-text-secondary);
+						margin-top: var(--space-18);
+					}
+					.offer-description{
+						font-family: 'Basier Regular';
+						font-size: var(--fs-48);
+					}
+				}
+			}
+		}
+	}
+}

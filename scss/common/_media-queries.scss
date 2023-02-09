@@ -1,0 +1,38 @@
+// Media queries
+// These cannot be CSS variables, as they are not supported in media queries, so sticking to SCSS variables
+$media-largexxxx:                  2300px;
+$media-largexxx:                   2100px;
+$media-largexx:                    1920px;
+$media-largex:                     1600px;
+$media-large:                      1450px;
+$media-medlarge:                   1280px;
+$media-medMedLarge:                1024px;
+$media-medium:                     990px;
+$media-medsmall:                   767px;
+$media-small:                      620px;
+$media-smallmx:                    550px;
+$media-smallx:                     480px;
+$media-smallxx:                    330px;
+
+$media-height-medlarge:                1180px;
+$media-height-large:                1200px;
+
+$media-mobile:                      800px;
+$media-mobile-max:                  799px;
+$media-medMedLarge-max:             1023px;
+
+$maxWidthLarge: 1920px;
+$maxWidth: 1650px;
+
+$marginTiny: 0.625rem; //10px
+$marginBase: 1rem;
+$marginSmall: 1.25rem; //20px
+$marginSmallMed: 1.5rem; //24px
+$marginMedium: 2rem; //32px
+$marginMedLarge: 2.812rem; //45px
+$marginLarge: 3.75rem; //60px
+$marginLargex: 5rem; //80px
+$marginLargexx: 6.875rem; //110px
+$marginForMaxWidth: calc(#{($maxWidthLarge - $maxWidth) / 2});
+$marginLargexxx: 8.75rem; //140px
+$marginLargexxxx: 14.375rem; //230px
