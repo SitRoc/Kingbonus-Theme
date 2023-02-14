@@ -72,6 +72,32 @@
         padding-right: 0;
     }
 }
-#site-wrapper{
+#site-wrapper, .page-wrapper {
     padding-top: var(--main-nav-height);
+}
+.page-wrapper {
+    @include setMaxWidthsWithMarginsLimitedWidth();
+    background-color: var(--color-primary);
+    padding-bottom: var(--space-110);
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'Basier Bold';
+    }
+    > h1{
+        font-size: var(--fs-60);
+        padding-top: var(--space-60);
+        padding-bottom: var(--space-44);
+    }
+}
+.elk-tournament-container{
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    margin-bottom: var(--space-44);
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }

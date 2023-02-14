@@ -41,6 +41,14 @@ section.content{
             }
         }
     }
+    &.full-width{
+        article{
+            max-width: unset;
+            p{
+                max-width: $media-medsmall;
+            }
+        }
+    }
     &.dark{
         background-color: var(--color-primary);
         article{

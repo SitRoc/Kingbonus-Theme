@@ -203,8 +203,54 @@ h2 {
   font-family: "Basier Bold";
 }
 
-#site-wrapper {
+#site-wrapper, .page-wrapper {
   padding-top: var(--main-nav-height);
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: var(--color-primary);
+  padding-bottom: var(--space-110);
+}
+@media only screen and (min-width: 620px) {
+  .page-wrapper {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .page-wrapper {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+  }
+}
+.page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
+  font-family: "Basier Bold";
+}
+.page-wrapper > h1 {
+  font-size: var(--fs-60);
+  padding-top: var(--space-60);
+  padding-bottom: var(--space-44);
+}
+
+.elk-tournament-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  margin-bottom: var(--space-44);
+}
+.elk-tournament-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #main-nav {
@@ -708,8 +754,7 @@ section.affiliate-list table tbody tr td.info h4::before {
   background: linear-gradient(-45deg, #222259, #50507a, #222259, #2e2e44);
   border-radius: 10px;
   background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
   margin-bottom: 2rem;
   height: 240px;
   text-align: center;
@@ -723,18 +768,6 @@ section.affiliate-list table tbody tr td.info h4::before {
 }
 .toplist-loading.show {
   display: block;
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 @keyframes gradient {
@@ -789,7 +822,6 @@ section.affiliate-list table tbody tr td.info h4::before {
 .tags {
   display: flex;
   margin-top: 0.5rem;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
@@ -802,7 +834,6 @@ section.affiliate-list table tbody tr td.info h4::before {
   color: var(--color-text-secondary);
   text-transform: uppercase;
   font-size: var(--fs-12);
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.3rem 0.5rem 0.2rem 0.5rem;
@@ -849,6 +880,12 @@ section.content .content-container article h5 {
 section.content .content-container article h6 {
   font-size: var(--fs-14);
   padding-bottom: var(--space-18);
+}
+section.content.full-width article {
+  max-width: unset;
+}
+section.content.full-width article p {
+  max-width: 767px;
 }
 section.content.dark {
   background-color: var(--color-primary);

@@ -1,0 +1,32 @@
+{    
+	"editor.tabSize": 4,
+    "tab_size": 4,
+    "cSpell.words": [
+        "callout",
+        "connectedbanksmodule"
+    ],
+    "files.associations": {
+        "*.html": "twig"
+    },
+    "emmet.includeLanguages": {
+        "twig": "html"
+    },
+    "liveSassCompile.settings.excludeList": [ 
+        "**/node_modules/**",
+        "**/vendor/**",
+        "**/plugins/**",
+        "**/cpresources/**",
+        ".vscode/**",
+        "/wp-includes/",
+        "/wp-admin/"
+    ],
+    "liveSassCompile.settings.forceBaseDirectory": "/scss/",
+    "liveSassCompile.settings.formats": [
+        {
+         "format": "expanded",
+         "extensionName": ".css",
+         "savePath": "/css/"
+         }
+     ],
+    "liveSassCompile.settings.generateMap": false,
+}
