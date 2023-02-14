@@ -1,0 +1,123 @@
+:root {
+    // Body font size
+    --fs-base: 14px;
+
+    // Scaling variables. They need to remain unitless
+    // These control the typography functions
+    --scale-base: 16;
+    --scale-full-width: 1920;
+
+    @media only screen and (min-width: $media-medium) {
+        --fs-base: 16px;
+    }
+
+    --gradient:  linear-gradient(
+        90deg, 
+        #000000 100%, 
+        #197BFD 100%, 
+        #FB68FF 100%,
+        #23306E 100%,
+        #03557E 100%, 
+        #2C4BA8 100%,
+        #000000 100%);
+
+    //Font sizes
+    --fs-12: #{convertPixelToRem(12)};
+    --fs-14: #{convertPixelToRem(14)};
+    --fs-16: #{convertPixelToRem(16)};
+    --fs-18: clamp(#{convertPixelToRem(16)}, #{scaleTypography(18)}, #{convertPixelToRem(18)});;
+    --fs-20: clamp(#{convertPixelToRem(16)}, #{scaleTypography(20)}, #{convertPixelToRem(20)});
+    --fs-26: clamp(#{convertPixelToRem(19)}, #{scaleTypography(26)}, #{convertPixelToRem(26)});
+    --fs-32: clamp(#{convertPixelToRem(22)}, #{scaleTypography(32)}, #{convertPixelToRem(32)});
+    --fs-48: clamp(#{convertPixelToRem(24)}, #{scaleTypography(48)}, #{convertPixelToRem(48)});
+    --fs-60: clamp(#{convertPixelToRem(32)}, #{scaleTypography(60)}, #{convertPixelToRem(60)});
+    --fs-80: clamp(#{convertPixelToRem(34)}, #{scaleTypography(80)}, #{convertPixelToRem(80)});
+    --fs-90: clamp(#{convertPixelToRem(36)}, #{scaleTypography(90)}, #{convertPixelToRem(90)});
+    --fs-110: clamp(#{convertPixelToRem(56)}, #{scaleTypography(110)}, #{convertPixelToRem(110)});
+    --fs-160: clamp(#{convertPixelToRem(80)}, #{scaleTypography(160)}, #{convertPixelToRem(160)});
+    --fs-220: clamp(#{convertPixelToRem(112)}, #{scaleTypography(220)}, #{convertPixelToRem(220)});
+    
+    // Space sizes
+    --space-4: clamp(#{convertPixelToRem(2)}, #{scaleTypography(4)}, #{convertPixelToRem(4)});
+    --space-5: clamp(#{convertPixelToRem(3)}, #{scaleTypography(5)}, #{convertPixelToRem(5)});
+    --space-8: clamp(#{convertPixelToRem(4)}, #{scaleTypography(8)}, #{convertPixelToRem(8)});
+    --space-10: clamp(#{convertPixelToRem(4)}, #{scaleTypography(10)}, #{convertPixelToRem(10)});
+    --space-12: clamp(#{convertPixelToRem(4)}, #{scaleTypography(12)}, #{convertPixelToRem(12)});
+    --space-14: clamp(#{convertPixelToRem(4)}, #{scaleTypography(14)}, #{convertPixelToRem(14)});
+    --space-16: clamp(#{convertPixelToRem(12)}, #{scaleTypography(16)}, #{convertPixelToRem(16)});
+    --space-18: clamp(#{convertPixelToRem(16)}, #{scaleTypography(18)}, #{convertPixelToRem(18)});
+    --space-20: clamp(#{convertPixelToRem(16)}, #{scaleTypography(20)}, #{convertPixelToRem(20)});
+    --space-22: clamp(#{convertPixelToRem(16)}, #{scaleTypography(22)}, #{convertPixelToRem(22)});
+    --space-25: clamp(#{convertPixelToRem(18)}, #{scaleTypography(25)}, #{convertPixelToRem(25)});
+    --space-28: clamp(#{convertPixelToRem(20)}, #{scaleTypography(28)}, #{convertPixelToRem(28)});
+    --space-30: clamp(#{convertPixelToRem(20)}, #{scaleTypography(30)}, #{convertPixelToRem(30)});
+    --space-32: clamp(#{convertPixelToRem(20)}, #{scaleTypography(32)}, #{convertPixelToRem(32)});
+    --space-36: clamp(#{convertPixelToRem(20)}, #{scaleTypography(36)}, #{convertPixelToRem(36)});
+    --space-40: clamp(#{convertPixelToRem(20)}, #{scaleTypography(40)}, #{convertPixelToRem(40)});
+    --space-44: clamp(#{convertPixelToRem(21)}, #{scaleTypography(44)}, #{convertPixelToRem(44)});
+    --space-48: clamp(#{convertPixelToRem(22)}, #{scaleTypography(48)}, #{convertPixelToRem(48)});
+    --space-54: clamp(#{convertPixelToRem(22)}, #{scaleTypography(54)}, #{convertPixelToRem(54)});
+    --space-60: clamp(#{convertPixelToRem(25)}, #{scaleTypography(55)}, #{convertPixelToRem(60)});
+    --space-66: clamp(#{convertPixelToRem(35)}, #{scaleTypography(66)}, #{convertPixelToRem(66)});
+    --space-72: clamp(#{convertPixelToRem(45)}, #{scaleTypography(72)}, #{convertPixelToRem(72)});
+    --space-80: clamp(#{convertPixelToRem(40)}, #{scaleTypography(80)}, #{convertPixelToRem(80)});
+    --space-85: clamp(#{convertPixelToRem(42)}, #{scaleTypography(85)}, #{convertPixelToRem(85)});
+    --space-90: clamp(#{convertPixelToRem(46)}, #{scaleTypography(90)}, #{convertPixelToRem(90)});
+    --space-100: clamp(#{convertPixelToRem(50)}, #{scaleTypography(100)}, #{convertPixelToRem(100)});
+    --space-110: clamp(#{convertPixelToRem(50)}, #{scaleTypography(110)}, #{convertPixelToRem(110)});
+    --space-120: clamp(#{convertPixelToRem(56)}, #{scaleTypography(120)}, #{convertPixelToRem(120)}); 
+    --space-135: clamp(#{convertPixelToRem(60)}, #{scaleTypography(135)}, #{convertPixelToRem(135)});
+    --space-145: clamp(#{convertPixelToRem(62)}, #{scaleTypography(145)}, #{convertPixelToRem(145)});
+    --space-150: clamp(#{convertPixelToRem(65)}, #{scaleTypography(150)}, #{convertPixelToRem(150)});
+    --space-160: clamp(#{convertPixelToRem(66)}, #{scaleTypography(160)}, #{convertPixelToRem(160)});
+    --space-165: clamp(#{convertPixelToRem(68)}, #{scaleTypography(160)}, #{convertPixelToRem(160)});
+    --space-170: clamp(#{convertPixelToRem(75)}, #{scaleTypography(170)}, #{convertPixelToRem(170)});
+    --space-185: clamp(#{convertPixelToRem(80)}, #{scaleTypography(185)}, #{convertPixelToRem(185)});
+    --space-192: clamp(#{convertPixelToRem(80)}, #{scaleTypography(192)}, #{convertPixelToRem(192)});
+    --space-200: clamp(#{convertPixelToRem(80)}, #{scaleTypography(200)}, #{convertPixelToRem(200)});
+    --space-215: clamp(#{convertPixelToRem(85)}, #{scaleTypography(215)}, #{convertPixelToRem(215)});
+    --space-235: clamp(#{convertPixelToRem(90)}, #{scaleTypography(235)}, #{convertPixelToRem(235)});
+    --space-260: clamp(#{convertPixelToRem(100)}, #{scaleTypography(260)}, #{convertPixelToRem(260)});
+    --space-275: clamp(#{convertPixelToRem(105)}, #{scaleTypography(275)}, #{convertPixelToRem(275)});
+    --space-300: clamp(#{convertPixelToRem(145)}, #{scaleTypography(300)}, #{convertPixelToRem(300)});
+    --space-325: clamp(#{convertPixelToRem(185)}, #{scaleTypography(325)}, #{convertPixelToRem(325)});
+    --space-380: clamp(#{convertPixelToRem(250)}, #{scaleTypography(380)}, #{convertPixelToRem(380)});
+    --space-470: clamp(#{convertPixelToRem(350)}, #{scaleTypography(470)}, #{convertPixelToRem(470)});
+    --space-500: clamp(#{convertPixelToRem(275)}, #{scaleTypography(500)}, #{convertPixelToRem(500)});
+    --space-525: clamp(#{convertPixelToRem(288)}, #{scaleTypography(525)}, #{convertPixelToRem(525)});
+    --space-740: clamp(#{convertPixelToRem(300)}, #{scaleTypography(740)}, #{convertPixelToRem(740)});
+    --space-800: clamp(#{convertPixelToRem(400)}, #{scaleTypography(800)}, #{convertPixelToRem(800)});
+    --space-950: clamp(#{convertPixelToRem(475)}, #{scaleTypography(950)}, #{convertPixelToRem(950)});
+    --space-1030: clamp(#{convertPixelToRem(550)}, #{scaleTypography(1030)}, #{convertPixelToRem(1030)});
+    --space-1100: clamp(#{convertPixelToRem(550)}, #{scaleTypography(1100)}, #{convertPixelToRem(1100)});
+
+    --space-left-right-padding: 16px;
+    // Only use something like this where absolutely necessary. Always try and rely on the clamp!
+    @media only screen and (min-width: $media-smallx) {
+        --space-left-right-padding: clamp(#{convertPixelToRem(16)}, #{scaleTypography(130)}, #{convertPixelToRem(130)});
+    }
+    
+    --space-pagination-size: clamp(#{convertPixelToRem(32)}, #{scaleTypography(54)}, #{convertPixelToRem(54)});
+
+    // Max widths
+    --max-width-large:                  1920px;
+    --max-width:                        1650px;
+
+    // Transition Speeds
+    --fast-speed:                       0.1s;
+    --medium-speed:                     0.3s;
+    --slow-speed:                       0.6s;
+
+    //Min heights
+    --min-height-background-image:      300px;
+
+    --main-nav-height:                  104px;
+    --border-radius:                    10px;
+}
+p{
+    margin-bottom: 1.25rem;
+}
+h2{
+    font-size: var(--fs-32);
+    font-family: 'Basier Bold';
+}
