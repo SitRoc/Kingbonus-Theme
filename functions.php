@@ -564,7 +564,12 @@ if( function_exists('acf_add_options_page') ) {
 // would be the inner-most category.
 function get_innermost_category($post_id) {
     $categories = get_the_terms($post_id, 'category');
+	//print_r($categories);
     if (!empty($categories)) {
+		// if $categories has only one value return it
+		if (count($categories) == 1) {
+			return $categories[0];
+		}
         $category_list = array();
         foreach ($categories as $category) {
             $category_list[] = $category->term_id;

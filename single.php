@@ -11,7 +11,7 @@
     switch ($template) {
         case 1:
             // News Template
-            get_template_part('template-parts/content/index');
+            get_template_part('template-parts/news/index');
             break;
         case 2:
             // Full Review Template
