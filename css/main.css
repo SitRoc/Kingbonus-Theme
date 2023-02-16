@@ -689,6 +689,16 @@ section.affiliate-list table tbody tr td.info h4::before {
   text-transform: uppercase;
   display: block;
 }
+section.affiliate-list table tbody tr td.info .feature {
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-18);
+  height: 36px;
+}
+section.affiliate-list table tbody tr td.info .feature img {
+  display: inline-block;
+  margin-right: var(--space-10);
+}
 @media (max-width: 1090px) {
   section.affiliate-list table tbody tr td.info {
     flex: 0 0 25%;
