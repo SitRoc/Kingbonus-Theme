@@ -48,7 +48,7 @@ if( function_exists('acf_add_options_page') ) {
     
 }
  function theme_styles(){
-	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/css/main.css',false,'1.232','all');
+	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/css/main.css',false,'1.31','all');
 	 //wp_enqueue_script('flows', get_template_directory_uri().'/assets/js/flows.js', '', '', true);
  }
  add_action( 'wp_enqueue_scripts', 'theme_styles' );

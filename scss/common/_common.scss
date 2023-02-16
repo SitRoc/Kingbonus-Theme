@@ -75,6 +75,9 @@
 #site-wrapper, .page-wrapper {
     padding-top: var(--main-nav-height);
 }
+.page-container {
+    background-color: var(--color-primary);
+}
 .page-wrapper {
     @include setMaxWidthsWithMarginsLimitedWidth();
     background-color: var(--color-primary);

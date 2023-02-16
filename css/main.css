@@ -207,6 +207,10 @@ h2 {
   padding-top: var(--main-nav-height);
 }
 
+.page-container {
+  background-color: var(--color-primary);
+}
+
 .page-wrapper {
   width: 100%;
   max-width: 1650px;
