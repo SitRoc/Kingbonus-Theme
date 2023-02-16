@@ -1,0 +1,45 @@
+{
+    "key": "group_63ee19bf85df8",
+    "title": "General Text Fields",
+    "fields": [
+        {
+            "key": "field_63ee19c089243",
+            "label": "Search, Category Listing Label Field",
+            "name": "search_category_listing_label_field",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Publication by Kingbonus",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1676548609
+}
