@@ -129,6 +129,16 @@ section.affiliate-list{
                                 display: block;
                             }
                         }
+                        .feature{
+                            display: flex;
+                            align-items: center;
+                            margin-top: var(--space-18);
+                            height: 36px;
+                            img{
+                                display: inline-block;
+                                margin-right: var(--space-10);
+                            }
+                        }
                         @media (max-width: 1090px) {
                             flex: 0 0 25%;
                             padding-top: 1.5rem;
