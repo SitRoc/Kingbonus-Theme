@@ -203,12 +203,16 @@ h2 {
   font-family: "Basier Bold";
 }
 
-#site-wrapper, .page-wrapper {
+#site-wrapper, .page-container {
   padding-top: var(--main-nav-height);
 }
 
 .page-container {
   background-color: var(--color-primary);
+}
+.page-container section.featured-image img {
+  max-width: 100%;
+  width: 100%;
 }
 
 .page-wrapper {
@@ -241,6 +245,10 @@ h2 {
   font-size: var(--fs-60);
   padding-top: var(--space-60);
   padding-bottom: var(--space-44);
+}
+.page-wrapper section.featured-image img {
+  max-width: 100%;
+  margin-top: var(--space-54);
 }
 
 .elk-tournament-container {
@@ -866,6 +874,9 @@ section.content .content-container article a {
 section.content .content-container article a:hover {
   color: var(--color-primary);
 }
+section.content .content-container article strong {
+  font-family: "Basier Bold";
+}
 section.content .content-container article h1, section.content .content-container article h2, section.content .content-container article h3, section.content .content-container article h4, section.content .content-container article h5, section.content .content-container article h6 {
   font-family: "Basier Bold";
 }
@@ -895,11 +906,37 @@ section.content .content-container article h6 {
   font-size: var(--fs-14);
   padding-bottom: var(--space-18);
 }
+section.content .content-container article ul {
+  list-style: unset;
+  padding-left: var(--space-22);
+  max-width: 767px;
+  margin-bottom: var(--space-54);
+}
+section.content .content-container article ul li {
+  padding-bottom: var(--space-8);
+}
+section.content .content-container article figure {
+  margin-bottom: var(--space-54);
+}
 section.content.full-width article {
   max-width: unset;
 }
 section.content.full-width article p {
   max-width: 767px;
+  margin-bottom: var(--space-40);
+}
+section.content.full-width article p.full-width {
+  max-width: unset;
+}
+section.content.full-width article p.highlighted-para {
+  margin-bottom: var(--space-54);
+}
+section.content.full-width article p.highlighted-para a {
+  display: block;
+  margin-bottom: var(--space-25);
+}
+section.content.full-width article p.highlighted-para a:hover {
+  color: var(--color-primary-dark);
 }
 section.content.dark {
   background-color: var(--color-primary);

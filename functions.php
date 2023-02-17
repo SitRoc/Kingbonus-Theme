@@ -48,10 +48,16 @@ if( function_exists('acf_add_options_page') ) {
     
 }
  function theme_styles(){
-	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/css/main.css',false,'1.32','all');
+	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/css/main.css',false,'1.33','all');
 	 //wp_enqueue_script('flows', get_template_directory_uri().'/assets/js/flows.js', '', '', true);
  }
  add_action( 'wp_enqueue_scripts', 'theme_styles' );
+
+function enqueue_anchor_link_script() {
+    wp_enqueue_script( 'anchor-link', get_template_directory_uri() . '/js/anchor-links.js', array(), '1.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_anchor_link_script' );
+ 
  // Remove dashicons in frontend for unauthenticated users
  add_action( 'wp_enqueue_scripts', 'bs_dequeue_dashicons' );
  function bs_dequeue_dashicons() {
@@ -345,6 +351,7 @@ if( function_exists('acf_add_options_page') ) {
  
  include_once( get_stylesheet_directory() .'/shortcodes/casinoliste.php');
  include_once( get_stylesheet_directory() .'/shortcodes/slots-review-list.php');
+ include_once( get_stylesheet_directory() .'/blocks/index.php');
  
  function odd_save_post( $post_id ) {
 	 $bettingSummaryID = 4547;
