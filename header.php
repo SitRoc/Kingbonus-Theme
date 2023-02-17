@@ -69,12 +69,12 @@
             </div>
             <div id="menu-right">
                <?php 
-                  // wp_nav_menu( array(
-                  // 'theme_location' => 'main-menu',
-                  // 'menu-container' => 'ul',
-                  // 'menu_id' => 'main-menu',
-                  // 'container' => false,
-                  // 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',) ); 	
+                  wp_nav_menu( array(
+                  'theme_location' => 'main-menu',
+                  'menu-container' => 'ul',
+                  'menu_id' => 'main-menu',
+                  'container' => false,
+                  'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',) ); 	
                ?>
                <?php 
                   // wp_nav_menu( array(
@@ -92,7 +92,7 @@
                   // 'container' => false,
                   // 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',) ); 
                   ?> 
-                  <a href="#" id="pull-menu" class="nav-mobile"><img src="<?php bloginfo('template_url'); ?>/images/mobile-nav-icon-new.webp" width="22" height="14" alt="Menu Nav Icon"></a>
+                  <a href="#" id="pull-menu" class="nav-mobile"><img src="<?php bloginfo('template_url'); ?>/images/menu.svg" width="36" height="36" alt="Menu Nav Icon"></a>
             </div>
          </div>
       </nav>

@@ -8,11 +8,13 @@ anchorLinks.forEach(function(link) {
   link.addEventListener('click', function(event) {
     event.preventDefault();
     var headerHeight = document.querySelector('#main-nav').offsetHeight;
-    // Add 32px to headerHeight
     headerHeight += 32;
     var targetId = link.getAttribute('href').substring(1);
-    var targetElement = document.getElementById(targetId);
-    var targetOffset = targetElement.offsetTop;
-    window.scrollTo(0, targetOffset - headerHeight);
+    // if targetId is not null
+    if (targetId) {
+        var targetElement = document.getElementById(targetId);
+        var targetOffset = targetElement.offsetTop;
+        window.scrollTo(0, targetOffset - headerHeight);
+    }
   });
 });
