@@ -297,6 +297,12 @@ h2 {
     padding-right: 6.875rem;
   }
 }
+@media only screen and (max-width: 768px) {
+  #main-nav #menu-container .mobile-logo img {
+    width: 250px !important;
+    height: 32px;
+  }
+}
 #main-nav #menu-container #menu-right {
   display: flex;
   height: 100%;
@@ -333,6 +339,7 @@ h2 {
   color: #fff;
 }
 #main-nav #menu-container #menu-right #main-menu li a {
+  font-family: "Basier Bold";
   color: #fff;
   text-decoration: none;
   transition: all 0.4s ease-in-out;
@@ -341,13 +348,40 @@ h2 {
   font-size: 17px;
 }
 #main-nav #menu-container #menu-right #main-menu li a:hover {
-  background-color: rgba(0, 0, 0, 0.03);
-  opacity: 0.7;
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
 #main-nav #menu-container #menu-right #main-menu li a:hover:after {
   text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+  #main-nav #menu-container #menu-right #main-menu {
+    width: 100%;
+    max-width: 1650px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: var(--main-nav-height);
+    background-color: var(--color-primary-dark);
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 620px) {
+  #main-nav #menu-container #menu-right #main-menu {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 1280px) {
+  #main-nav #menu-container #menu-right #main-menu {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+  }
 }
 #main-nav #menu-container #menu-right #search-menu {
   display: none;
@@ -383,8 +417,12 @@ h2 {
   line-height: 23px;
 }
 #main-nav #menu-container #menu-right #pull-menu {
-  display: none;
   margin-left: 30px;
+}
+@media only screen and (min-width: 768px) {
+  #main-nav #menu-container #menu-right #pull-menu {
+    display: none;
+  }
 }
 
 footer {

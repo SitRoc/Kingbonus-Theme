@@ -10,8 +10,11 @@ anchorLinks.forEach(function(link) {
     var headerHeight = document.querySelector('#main-nav').offsetHeight;
     headerHeight += 32;
     var targetId = link.getAttribute('href').substring(1);
-    var targetElement = document.getElementById(targetId);
-    var targetOffset = targetElement.offsetTop;
-    window.scrollTo(0, targetOffset - headerHeight);
+    // if targetId is not null
+    if (targetId) {
+        var targetElement = document.getElementById(targetId);
+        var targetOffset = targetElement.offsetTop;
+        window.scrollTo(0, targetOffset - headerHeight);
+    }
   });
 });
