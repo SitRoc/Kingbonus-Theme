@@ -68,13 +68,16 @@
 				   <a class="mobile-logo" href="<?php bloginfo('url'); ?>" rel="home"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="Kingbonus Logo" title="Kingbonus" width="331" height="43"></a>
             </div>
             <div id="menu-right">
-               <?php 
+               <?php
                   wp_nav_menu( array(
                   'theme_location' => 'main-menu',
                   'menu-container' => 'ul',
                   'menu_id' => 'main-menu',
                   'container' => false,
-                  'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',) ); 	
+                  'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',) );
+                  // if ($menu){
+                  //    echo $menu;
+                  // }
                ?>
                <?php 
                   // wp_nav_menu( array(
@@ -92,7 +95,13 @@
                   // 'container' => false,
                   // 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',) ); 
                   ?> 
+               <?php 
+               // If main-menu exists and has items, then show the mobile menu icon
+               if ( has_nav_menu( 'main-menu' ) ) {
+                  $menu_items = wp_get_nav_menu_items('main-menu');
+                  if (!empty($menu_items)) { ?>
                   <a href="#" id="pull-menu" class="nav-mobile"><img src="<?php bloginfo('template_url'); ?>/images/menu.svg" width="36" height="36" alt="Menu Nav Icon"></a>
+               <?php } } ?>
             </div>
          </div>
       </nav>
