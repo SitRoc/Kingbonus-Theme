@@ -10,6 +10,9 @@ section.content{
                     color: var(--color-primary);
                 }
             }
+            strong{
+                font-family: 'Basier Bold';
+            }
             h1,h2,h3,h4,h5,h6{
                 font-family: 'Basier Bold';
             }
@@ -39,6 +42,18 @@ section.content{
                 font-size: var(--fs-14);
                 padding-bottom: var(--space-18);
             }
+            ul{
+                list-style: unset;
+                padding-left: var(--space-22);
+                max-width: $media-medsmall;
+                margin-bottom: var(--space-54);
+                li{
+                    padding-bottom: var(--space-8);
+                }
+            }
+            figure{
+                margin-bottom: var(--space-54);
+            }
         }
     }
     &.full-width{
@@ -46,6 +61,20 @@ section.content{
             max-width: unset;
             p{
                 max-width: $media-medsmall;
+                margin-bottom: var(--space-40);
+                &.full-width{
+                    max-width: unset;
+                }
+                &.highlighted-para{
+                    margin-bottom: var(--space-54);
+                    a{
+                        display: block;
+                        margin-bottom: var(--space-25);
+                        &:hover{
+                            color: var(--color-primary-dark);
+                        }
+                    }
+                }
             }
         }
     }

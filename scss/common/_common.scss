@@ -72,11 +72,17 @@
         padding-right: 0;
     }
 }
-#site-wrapper, .page-wrapper {
+#site-wrapper, .page-container {
     padding-top: var(--main-nav-height);
 }
 .page-container {
     background-color: var(--color-primary);
+    section.featured-image{
+        img{
+            max-width: 100%;
+            width: 100%;
+        }
+    }
 }
 .page-wrapper {
     @include setMaxWidthsWithMarginsLimitedWidth();
@@ -89,6 +95,12 @@
         font-size: var(--fs-60);
         padding-top: var(--space-60);
         padding-bottom: var(--space-44);
+    }
+    section.featured-image{
+        img{
+            max-width: 100%;
+            margin-top: var(--space-54);
+        }
     }
 }
 .elk-tournament-container{
