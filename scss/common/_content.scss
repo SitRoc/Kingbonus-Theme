@@ -17,29 +17,30 @@ section.content{
                 font-family: 'Basier Bold';
             }
             h1{
-                font-size: var(--fs-66);
-                padding-bottom: var();
+                font-size: var(--fs-48);
+                padding-bottom: var(--space-32);
+                padding-top: var(--space-16);
             }
             h2{
-                font-size: var(--fs-48);
-                padding-bottom: var(--space-16);
-                padding-top: var(--space-8);
+                font-size: var(--fs-32);
+                padding-bottom: var(--space-32);
+                padding-top: var(--space-16);
             }
             h3{
-                font-size: var(--fs-32);
-                padding-bottom: var(--space-16);
-                padding-top: var(--space-8);
+                font-size: var(--fs-26);
+                padding-bottom: var(--space-32);
+                padding-top: var(--space-16);
             }
             h4{
-                font-size: var(--fs-26);
-                padding-bottom: var(--space-25);
-            }
-            h5{
                 font-size: var(--fs-18);
                 padding-bottom: var(--space-25);
             }
-            h6{
+            h5{
                 font-size: var(--fs-14);
+                padding-bottom: var(--space-25);
+            }
+            h6{
+                font-size: var(--fs-12);
                 padding-bottom: var(--space-18);
             }
             ul{

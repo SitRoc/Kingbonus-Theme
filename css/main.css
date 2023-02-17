@@ -242,7 +242,7 @@ h2 {
   font-family: "Basier Bold";
 }
 .page-wrapper > h1 {
-  font-size: var(--fs-60);
+  font-size: var(--fs-48);
   padding-top: var(--space-60);
   padding-bottom: var(--space-44);
 }
@@ -881,29 +881,30 @@ section.content .content-container article h1, section.content .content-containe
   font-family: "Basier Bold";
 }
 section.content .content-container article h1 {
-  font-size: var(--fs-66);
-  padding-bottom: var();
+  font-size: var(--fs-48);
+  padding-bottom: var(--space-32);
+  padding-top: var(--space-16);
 }
 section.content .content-container article h2 {
-  font-size: var(--fs-48);
-  padding-bottom: var(--space-16);
-  padding-top: var(--space-8);
+  font-size: var(--fs-32);
+  padding-bottom: var(--space-32);
+  padding-top: var(--space-16);
 }
 section.content .content-container article h3 {
-  font-size: var(--fs-32);
-  padding-bottom: var(--space-16);
-  padding-top: var(--space-8);
+  font-size: var(--fs-26);
+  padding-bottom: var(--space-32);
+  padding-top: var(--space-16);
 }
 section.content .content-container article h4 {
-  font-size: var(--fs-26);
-  padding-bottom: var(--space-25);
-}
-section.content .content-container article h5 {
   font-size: var(--fs-18);
   padding-bottom: var(--space-25);
 }
-section.content .content-container article h6 {
+section.content .content-container article h5 {
   font-size: var(--fs-14);
+  padding-bottom: var(--space-25);
+}
+section.content .content-container article h6 {
+  font-size: var(--fs-12);
   padding-bottom: var(--space-18);
 }
 section.content .content-container article ul {
