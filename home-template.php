@@ -1,22 +1,5 @@
 <?php /* Template Name: Home Page*/ ?>
 <?php get_header(); ?>
-<?php $Giveaway= get_post_meta($post->ID, 'Giveaway', true); ?>
-<?php $Casino1= get_post_meta($post->ID, 'Casino1', true); ?>
-<?php $Casino2= get_post_meta($post->ID, 'Casino2', true); ?>
-<?php $Casino3= get_post_meta($post->ID, 'Casino3', true); ?>
-<?php $Casino4= get_post_meta($post->ID, 'Casino4', true); ?>
-<?php $Promo1= get_post_meta($post->ID, 'Promo1', true); ?>
-<?php $Promo2= get_post_meta($post->ID, 'Promo2', true); ?>
-<?php $Promo3= get_post_meta($post->ID, 'Promo3', true); ?>
-<?php $Promo4= get_post_meta($post->ID, 'Promo4', true); ?>
-<?php $SliderLink1= get_post_meta($post->ID, 'SliderLink1', true); ?>
-<?php $SliderLink2= get_post_meta($post->ID, 'SliderLink2', true); ?>
-<?php $SliderLink3= get_post_meta($post->ID, 'SliderLink3', true); ?>
-<?php $SliderLink4= get_post_meta($post->ID, 'SliderLink4', true); ?>
-<?php $Button1= get_post_meta($post->ID, 'Button1', true); ?>
-<?php $Button2= get_post_meta($post->ID, 'Button2', true); ?>
-<?php $Button3= get_post_meta($post->ID, 'Button3', true); ?>
-<?php $Button4= get_post_meta($post->ID, 'Button4', true); ?>
 <div id="site-wrapper">
    <div id="top-area-wrapper">
       <div id="top-area">
