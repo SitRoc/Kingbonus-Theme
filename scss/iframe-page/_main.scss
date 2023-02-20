@@ -1,0 +1,16 @@
+.full-page-iframe{
+    height: 2400px;
+    width: 100%;
+    border: none;
+    margin-top: var(--main-nav-height);
+    background-image: none !important;
+    @media only screen and (max-width: 1200px) {
+        height: 2400px;
+    }
+    @media only screen and (max-width: 900px) {
+        height: 3300px;
+    }
+    @media only screen and (max-width: 550px) {
+        height: 5200px;
+    }
+}

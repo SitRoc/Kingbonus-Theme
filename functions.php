@@ -48,7 +48,7 @@ if( function_exists('acf_add_options_page') ) {
     
 }
  function theme_styles(){
-	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/css/main.css',false,'1.34','all');
+	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/css/main.css',false,'1.35','all');
 	 //wp_enqueue_script('flows', get_template_directory_uri().'/assets/js/flows.js', '', '', true);
  }
  add_action( 'wp_enqueue_scripts', 'theme_styles' );
@@ -353,6 +353,31 @@ add_action( 'wp_enqueue_scripts', 'enqueue_anchor_link_script' );
  include_once( get_stylesheet_directory() .'/shortcodes/casinoliste.php');
  include_once( get_stylesheet_directory() .'/shortcodes/slots-review-list.php');
  include_once( get_stylesheet_directory() .'/blocks/index.php');
+
+ // Add a Gutenberg Block named "Sidebar Navigation"
+ function register_sidebar_navigation_block() {
+	 wp_register_script(
+		 'sidebar-navigation-block',
+		 get_stylesheet_directory_uri() . '/blocks/sidebar-navigation/block.js',
+		 array( 'wp-blocks', 'wp-element', 'wp-editor' )
+	 );
+	 register_block_type( 'sidebar-navigation/sidebar-navigation', array(
+		 'editor_script' => 'sidebar-navigation-block',
+	 ) );
+ }
+ add_action( 'init', 'register_sidebar_navigation_block' );
+// function my_plugin_enqueue_assets() {
+//     // Enqueue block's JS file
+//     wp_enqueue_script(
+//         'sidebar-navigation-block',
+//         get_stylesheet_directory_uri() . '/blocks/sidebar-navigation/block.js',
+//         array( 'wp-blocks', 'wp-components', 'wp-data', 'wp-element', 'wp-i18n' ),
+//         filemtime( get_stylesheet_directory_uri() . '/blocks/sidebar-navigation/block.js' ),
+//         true
+//     );
+// }
+// add_action( 'enqueue_block_editor_assets', 'my_plugin_enqueue_assets' );
+
  
  function odd_save_post( $post_id ) {
 	 $bettingSummaryID = 4547;

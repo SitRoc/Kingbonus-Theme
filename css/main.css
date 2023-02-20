@@ -1343,3 +1343,26 @@ section.faqs .faq-container .question {
   height: 1px;
   opacity: 0.1;
 }
+
+.full-page-iframe {
+  height: 2400px;
+  width: 100%;
+  border: none;
+  margin-top: var(--main-nav-height);
+  background-image: none !important;
+}
+@media only screen and (max-width: 1200px) {
+  .full-page-iframe {
+    height: 2400px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .full-page-iframe {
+    height: 3300px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .full-page-iframe {
+    height: 5200px;
+  }
+}
