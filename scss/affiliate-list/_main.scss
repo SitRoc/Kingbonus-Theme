@@ -1,3 +1,15 @@
+.button-2{
+    background-color: var(--color-accent-primary);
+    border-radius: 10px;
+    padding: 1rem 2.5rem;
+    color: var(--color-text) !important;
+    font-family: 'Basier Bold';
+    font-size: 1.2rem;
+    display: block;
+    transition: .3s;
+    text-align: center;
+    text-decoration: none;
+}
 .button-3{
     background-color: var(--color-accent-primary);
     border-radius: 10px;

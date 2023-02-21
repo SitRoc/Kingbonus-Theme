@@ -1,4 +1,4 @@
-<?php /* Template Name: Home Page*/ ?>
+<?php /* Template Name: Home Page Old*/ ?>
 <?php get_header(); ?>
 <div id="site-wrapper">
    <div id="top-area-wrapper">

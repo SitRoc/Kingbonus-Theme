@@ -1,0 +1,179 @@
+.banner-container{
+    @include setMaxWidthsWithMarginsLimitedWidth();
+    padding-top: var(--space-44);
+    padding-bottom: var(--space-22);
+    @media (max-width: $media-medium) {
+        padding-top: var(--space-145);
+    }
+    .banner-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        nav{
+            flex: 0 0 23%;
+            h4{
+                color: var(--color-dark-text);
+                margin-bottom: var(--space-36);
+            }
+            li{
+                margin-bottom: var(--space-28);
+                a{
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Basier Bold';
+                    font-size: var(--fs-26);
+                    color: var(--color-dark-text-secondary);
+                    line-height: 1;
+                    img{
+                        margin-right: var(--space-22);
+                    }
+                }
+            }
+            @media (max-width: $media-medium) {
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: var(--main-nav-height-offset);
+                flex: 0 0 100%;
+                z-index: 100;
+                background-color: var(--color-background-grey);
+                h4{
+                    display: none;
+                }
+                ul{
+                    @include setMaxWidthsWithMarginsLimitedWidth();
+                    overflow: auto;
+                    white-space: nowrap;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+                    li{
+                        display: inline-block;
+                        margin-bottom: 0;
+                        padding-top: var(--space-16);
+                        padding-bottom: var(--space-16);
+                        margin-right: var(--space-28);
+                        a{
+                            color: var(--color-text);
+                            font-size: var(--fs-18);
+                            img{
+                                filter: invert(1);
+                                width: 22px !important;
+                                height: 22px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .hero-slider{
+            flex: 0 0 75%;
+            .slideshow-container{
+                position: relative;
+            }
+            @media (max-width: $media-medium) {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
+.slides{
+    border-radius: var(--border-radius-large);
+    height: var(--hero-banner-height);
+    background-image: var(--image-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .slide-text{
+        text-align: center;
+    }
+    .slide-title {
+        font-family: 'Basier Bold', Helvetica, Arial, Lucida, sans-serif;
+        font-size: var(--fs-48);
+        padding-bottom: var(--space-14);
+        line-height: 1em;
+        text-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+    }
+    .slide-description {
+        font-size: var(--fs-20);
+        line-height: 1.8em;
+        text-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+        margin-bottom: var(--space-48);
+    }
+}
+@keyframes fade {
+	from {
+		opacity: 0.4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+.slideInUp {
+	animation-fill-mode: forwards;
+	opacity: 0;
+	animation-delay: 0.5s;
+	animation-name: slideInUp;
+	animation-duration: 1s;
+}
+
+@keyframes slideInUp {
+	from {
+		transform: translateY(20%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+.slideshow-container:hover .arrow-prev {
+	opacity: 1.0;
+	left: 22px;
+}
+
+.slideshow-container:hover .arrow-next {
+	opacity: 1.0;
+	right: 22px;
+}
+.arrow-prev {
+	left: -22px;
+}
+
+.arrow-next {
+	right: -22px;
+}
+
+.arrow-prev:before {
+	content: "4";
+	font-family: ETmodules !important;
+	font-weight: 400;
+	text-shadow: 0 0;
+	direction: ltr;
+}
+
+.arrow-next:before {
+	content: "5";
+	font-family: ETmodules !important;
+	font-weight: 400;
+	text-shadow: 0 0;
+	direction: ltr;
+}
+
+.arrow-prev,
+.arrow-next {
+	position: absolute;
+	top: 50%;
+	z-index: 100;
+	font-size: 48px;
+	color: #fff;
+	margin-top: -24px;
+	transition: all .2s ease-in-out;
+	opacity: 0;
+}
