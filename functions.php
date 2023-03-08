@@ -54,9 +54,10 @@ if( function_exists('acf_add_options_page') ) {
  add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 function enqueue_anchor_link_script() {
-    wp_enqueue_script( 'anchor-link', get_template_directory_uri() . '/js/anchor-links.js', array(), '1.0', true );
-	wp_enqueue_script( 'open-menu_js', get_template_directory_uri() . '/js/open-menu.js', array(), '1.0', true );
-	wp_enqueue_script( 'slider_js', get_template_directory_uri() . '/js/hero-slider.js', array(), '1.0', true );
+    wp_enqueue_script( 'anchor-link', get_template_directory_uri() . '/js/anchor-links.js', array(), '1.1', true );
+	wp_enqueue_script( 'open-menu_js', get_template_directory_uri() . '/js/open-menu.js', array(), '1.1', true );
+	wp_enqueue_script( 'slider_js', get_template_directory_uri() . '/js/hero-slider.js', array(), '1.1', true );
+	wp_enqueue_script( 'expand_js', get_template_directory_uri() . '/js/expand-text.js', array(), '1.1', true );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_anchor_link_script' );
  
@@ -94,7 +95,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_anchor_link_script' );
 	 wp_enqueue_script('jquery');
   
 	 // register our main script but do not enqueue it yet
-	 wp_register_script( 'my_loadmore', get_template_directory_uri() . '/js/loadmore.js', array('jquery'), '7.00');
+	 //wp_register_script( 'my_loadmore', get_template_directory_uri() . '/js/loadmore.js', array('jquery'), '7.00');
   
 	 // now the most interesting part
 	 // we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP

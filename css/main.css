@@ -575,6 +575,24 @@ footer #footer-bottom {
   max-width: 767px;
 }
 
+.center-button {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.button-1 {
+  background-color: var(--color-accent-primary);
+  border-radius: 100px;
+  padding: 1rem 2.5rem;
+  color: var(--color-text) !important;
+  font-family: "Basier Bold";
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
 .button-2 {
   background-color: var(--color-accent-primary);
   border-radius: 10px;
@@ -1635,4 +1653,156 @@ section.faqs .faq-container .question {
   margin-top: -24px;
   transition: all 0.2s ease-in-out;
   opacity: 0;
+}
+
+.casino-list-container {
+  width: 100%;
+  max-width: 1650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: var(--space-44);
+  padding-bottom: var(--space-22);
+}
+@media only screen and (min-width: 620px) {
+  .casino-list-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .casino-list-container {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+  }
+}
+@media (max-width: 990px) {
+  .casino-list-container {
+    padding-top: var(--space-145);
+  }
+}
+.casino-list-container .casino-display-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.casino-list-container .casino-display-wrapper nav {
+  flex: 0 0 23%;
+}
+.casino-list-container .casino-display-wrapper nav h4 {
+  color: var(--color-dark-text);
+  margin-bottom: var(--space-36);
+}
+.casino-list-container .casino-display-wrapper nav li {
+  margin-bottom: var(--space-18);
+}
+.casino-list-container .casino-display-wrapper nav li a {
+  display: block;
+  background-color: var(--color-background-grey);
+  border-radius: var(--border-radius);
+  font-size: var(--fs-20);
+  color: var(--color-text);
+  font-family: "Basier Bold";
+  padding: var(--space-18) var(--space-28);
+  transition: background-color 0.3s;
+}
+.casino-list-container .casino-display-wrapper nav li a:hover {
+  background-color: var(--color-dark-text-secondary);
+}
+@media (max-width: 990px) {
+  .casino-list-container .casino-display-wrapper nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--main-nav-height-offset);
+    flex: 0 0 100%;
+    z-index: 100;
+    background-color: var(--color-background-grey);
+  }
+  .casino-list-container .casino-display-wrapper nav h4 {
+    display: none;
+  }
+  .casino-list-container .casino-display-wrapper nav ul {
+    width: 100%;
+    max-width: 1650px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 990px) and (min-width: 620px) {
+  .casino-list-container .casino-display-wrapper nav ul {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (max-width: 990px) and (min-width: 1280px) {
+  .casino-list-container .casino-display-wrapper nav ul {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+  }
+}
+@media (max-width: 990px) {
+  .casino-list-container .casino-display-wrapper nav ul::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 990px) {
+  .casino-list-container .casino-display-wrapper nav ul li {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+    margin-right: var(--space-28);
+  }
+}
+.casino-list-container .casino-display-wrapper .casino-list {
+  flex: 0 0 75%;
+}
+@media (max-width: 990px) {
+  .casino-list-container .casino-display-wrapper .casino-list {
+    flex: 0 0 100%;
+  }
+}
+.casino-list-container .casino-display-wrapper .casino-list h1 {
+  font-size: var(--fs-48);
+  color: var(--color-background-grey);
+  margin-bottom: var(--space-14);
+  font-family: "Basier Bold";
+}
+.casino-list-container .casino-display-wrapper .casino-list span.tagline {
+  font-family: "Basier Bold";
+  color: var(--color-dark-text-secondary);
+  line-height: 1.5;
+  font-size: var(--fs-26);
+  height: 4.5rem;
+  max-width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.casino-list-container .casino-display-wrapper .casino-list span.tagline.expanded {
+  height: auto;
+  -webkit-line-clamp: unset;
+}
+.casino-list-container .casino-display-wrapper .casino-list .center-content {
+  text-align: center;
+}
+.casino-list-container .casino-display-wrapper .casino-list .center-content a {
+  color: var(--color-background-grey);
+  display: block;
+  text-decoration: underline;
+  padding-top: var(--space-25);
+  transition: color 0.3s;
+}
+.casino-list-container .casino-display-wrapper .casino-list .center-content a:hover {
+  color: var(--color-dark-text-secondary);
 }
