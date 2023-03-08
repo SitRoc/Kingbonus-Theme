@@ -26,6 +26,9 @@
                 if( count($rows) > 4 ){
                     // Get random 4 rows
                     $rowkeys = array_rand($rows, 4);
+                } else {
+                    // Set rowkeys to be all rows
+                    $rowkeys = array_keys($rows);
                 }
                 //print_r($rows);
                 // for each loop through rows
