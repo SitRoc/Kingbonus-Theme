@@ -1764,6 +1764,7 @@ section.faqs .faq-container .question {
 }
 .casino-list-container .casino-display-wrapper .casino-list {
   flex: 0 0 75%;
+  width: 75%;
 }
 @media (max-width: 990px) {
   .casino-list-container .casino-display-wrapper .casino-list {
@@ -1805,4 +1806,87 @@ section.faqs .faq-container .question {
 }
 .casino-list-container .casino-display-wrapper .casino-list .center-content a:hover {
   color: var(--color-dark-text-secondary);
+}
+.casino-list-container .casino-display-wrapper .casino-list .casino-list-cards {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: var(--space-66);
+}
+.casino-list-container .casino-display-wrapper .casino-list .casino-list-cards .card-full {
+  flex: 0 0 calc(50% - var(--space-20));
+  width: calc(50% - var(--space-20));
+  margin-bottom: var(--space-40);
+}
+
+.card-full {
+  color: var(--color-text);
+}
+.card-full .card-container {
+  background-color: var(--color-background-grey);
+  border-radius: var(--border-radius);
+  padding: var(--space-25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.card-full .card-container .card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.card-full .card-container .card-header > a > img {
+  max-width: 100px;
+  height: 100px;
+  border-radius: var(--border-radius);
+}
+.card-full .card-container .card-header .card-header-details {
+  margin-left: var(--space-25);
+}
+.card-full .card-container .card-header .card-header-details a h3 {
+  font-size: var(--fs-32);
+  color: var(--color-text);
+  font-family: "Basier Bold";
+}
+.card-full .card-container .card-tags {
+  margin-top: var(--space-22);
+  min-height: 48px;
+}
+.card-full .card-container .card-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: var(--space-14);
+  margin-bottom: var(--space-10);
+}
+.card-full .card-container .card-features .feature-review {
+  flex: 0 0 calc(50% - var(--space-8));
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-12);
+  margin-bottom: var(--space-4);
+}
+.card-full .card-container .card-features .feature-review img {
+  margin-right: var(--space-8);
+}
+.card-full .card-container .card-offer-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--space-18);
+  margin-bottom: var(--space-32);
+}
+.card-full .card-container .card-offer-info .card-offer {
+  flex: 0 0 25%;
+}
+.card-full .card-container .card-offer-info .card-offer .offer-title {
+  display: block;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-size: var(--fs-12);
+}
+.card-full .card-container .card-offer-info .card-offer .offer-description {
+  font-size: var(--fs-26);
+  font-family: "Basier Bold";
 }

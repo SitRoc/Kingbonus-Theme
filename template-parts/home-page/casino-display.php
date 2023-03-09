@@ -34,11 +34,38 @@
                 </div>
             </div>
             <!-- Casino List -->
-            
+            <div class="casino-list-cards">
+                <?php
+                $args = [];
+                $args['posts_per_page'] = '8';
+                $args['meta_key'] = 'stars';
+                $args['orderby'] = 'meta_value_num';
+                $args['cat'] = $list_category->term_id;
+                    $args['meta_query'] = [
+                    'relation' => 'AND',
+                    'stars' => array('key' => 'Stars', 'compare' => 'EXISTS'),
+                ];
+                $args['orderby'] = ['stars' => 'DESC', 'post_date' => 'DESC' ];
+                $result = new WP_Query( $args );
+                while ($result->have_posts()) : $result->the_post();
+                    //get_template_part( 'template-parts/casino-list/casino-list-item', null, $post);
+                    get_template_part( 'template-parts/casino/item-card-full', null, $post );
+                endwhile;
+                wp_reset_postdata(); 
+                ?>
+            </div>
+            <?php
+            ?>
             <!-- CTA to Full List -->
+            <?php
+            if(get_field('enable_full_list_button')){
+            ?>
             <div class="center-button">
                 <a href="/casas-de-apuestas/" class="button-1">See all casinos here</a>
             </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </div>

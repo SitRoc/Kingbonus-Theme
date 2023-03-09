@@ -53,6 +53,13 @@
 
   gtag('config', 'G-YLE6Q4Z2HF');
 </script>
+<?php 
+   $is_dark = ''; 
+   if(get_field('dark_backdrop')){
+      $is_dark = 'dark';
+   }
+   $args['is_dark'] = $is_dark;
+?>
    <body <?php body_class( $args['is_dark'] ); ?>>
       <?php wp_body_open(); ?>
 	   <?php 

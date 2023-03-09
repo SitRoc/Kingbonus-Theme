@@ -272,6 +272,26 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_6409a05dd858f",
+            "label": "Enable Full List Button",
+            "name": "enable_full_list_button",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -292,5 +312,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678270898
+    "modified": 1678352548
 }
