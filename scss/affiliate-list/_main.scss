@@ -1,3 +1,31 @@
+.center-button{
+    text-align: center;
+    margin: 2rem 0;
+}
+.button-1{
+    background-color: var(--color-accent-primary);
+    border-radius: 100px;
+    padding: 1rem 2.5rem;
+    color: var(--color-text) !important;
+    font-family: 'Basier Bold';
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: .3s;
+    text-align: center;
+    text-decoration: none;
+}
+.button-2{
+    background-color: var(--color-accent-primary);
+    border-radius: 10px;
+    padding: 1rem 2.5rem;
+    color: var(--color-text) !important;
+    font-family: 'Basier Bold';
+    font-size: 1.2rem;
+    display: block;
+    transition: .3s;
+    text-align: center;
+    text-decoration: none;
+}
 .button-3{
     background-color: var(--color-accent-primary);
     border-radius: 10px;
@@ -22,6 +50,19 @@ a.button-4{
     font-size: 1.1rem;
     transition: .2s;
     text-decoration: none;
+}
+.button-5 a{
+    background-color: var(--color-accent-primary);
+    border-radius: 10px;
+    padding: 1rem 2.5rem;
+    color: var(--color-text) !important;
+    font-family: 'Basier Bold';
+    font-size: 1.2rem;
+    display: block;
+    transition: .3s;
+    text-align: center;
+    text-decoration: none !important;
+    display: inline-block;
 }
 .home-content-container{
     background-color: var(--color-text);

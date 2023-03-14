@@ -112,7 +112,17 @@
     --min-height-background-image:      300px;
 
     --main-nav-height:                  104px;
+    --main-nav-height-offset:           104px;    
     --border-radius:                    10px;
+    --border-radius-large:              30px;
+    --hero-banner-height:               369px;
+    
+}
+.logged-in{
+    --main-nav-height-offset:                  150px;
+    @media only screen and (min-width: $media-medsmall) {
+        --main-nav-height-offset:                  136px;
+    }
 }
 p{
     margin-bottom: 1.25rem;

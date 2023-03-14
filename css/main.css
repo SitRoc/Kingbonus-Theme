@@ -181,7 +181,10 @@ body.dark {
   --slow-speed: 0.6s;
   --min-height-background-image: 300px;
   --main-nav-height: 104px;
+  --main-nav-height-offset: 104px;
   --border-radius: 10px;
+  --border-radius-large: 30px;
+  --hero-banner-height: 369px;
 }
 @media only screen and (min-width: 990px) {
   :root {
@@ -191,6 +194,15 @@ body.dark {
 @media only screen and (min-width: 480px) {
   :root {
     --space-left-right-padding: clamp(calc(16 / var(--scale-base) * 1rem), calc((130 / (var(--scale-full-width) - var(--scale-base))) * 100 * 1vw + 0.1rem), calc(130 / var(--scale-base) * 1rem));
+  }
+}
+
+.logged-in {
+  --main-nav-height-offset: 150px;
+}
+@media only screen and (min-width: 767px) {
+  .logged-in {
+    --main-nav-height-offset: 136px;
   }
 }
 
@@ -238,6 +250,9 @@ h2 {
     padding-right: 6.875rem;
   }
 }
+.page-wrapper.dark {
+  background-color: var(--color-text-secondary);
+}
 .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
   font-family: "Basier Bold";
 }
@@ -249,6 +264,10 @@ h2 {
 .page-wrapper section.featured-image img {
   max-width: 100%;
   margin-top: var(--space-54);
+}
+
+.page-wrapper-home {
+  padding-top: var(--space-110);
 }
 
 .elk-tournament-container {
@@ -563,6 +582,37 @@ footer #footer-bottom {
   max-width: 767px;
 }
 
+.center-button {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.button-1 {
+  background-color: var(--color-accent-primary);
+  border-radius: 100px;
+  padding: 1rem 2.5rem;
+  color: var(--color-text) !important;
+  font-family: "Basier Bold";
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-2 {
+  background-color: var(--color-accent-primary);
+  border-radius: 10px;
+  padding: 1rem 2.5rem;
+  color: var(--color-text) !important;
+  font-family: "Basier Bold";
+  font-size: 1.2rem;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
 .button-3 {
   background-color: var(--color-accent-primary);
   border-radius: 10px;
@@ -588,6 +638,20 @@ a.button-4 {
   font-size: 1.1rem;
   transition: 0.2s;
   text-decoration: none;
+}
+
+.button-5 a {
+  background-color: var(--color-accent-primary);
+  border-radius: 10px;
+  padding: 1rem 2.5rem;
+  color: var(--color-text) !important;
+  font-family: "Basier Bold";
+  font-size: 1.2rem;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
 }
 
 .home-content-container {
@@ -1173,8 +1237,8 @@ section.faqs .faq-container .question {
 .full-review-content .frc-container .frc-c-main .details {
   background-color: var(--color-background-grey);
   border-radius: var(--border-radius);
-  padding: var(--space-36);
   color: var(--color-text);
+  padding: var(--space-36);
 }
 .full-review-content .frc-container .frc-c-main .details .bonus-element {
   margin-bottom: var(--space-28);
@@ -1365,4 +1429,528 @@ section.faqs .faq-container .question {
   .full-page-iframe {
     height: 5200px;
   }
+}
+
+.home-casino-container {
+  background-color: var(--color-primary);
+}
+
+.banner-container {
+  width: 100%;
+  max-width: 1650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: var(--space-44);
+  padding-bottom: var(--space-22);
+}
+@media only screen and (min-width: 620px) {
+  .banner-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .banner-container {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+  }
+}
+@media (max-width: 990px) {
+  .banner-container {
+    padding-top: var(--space-145);
+  }
+}
+.banner-container .banner-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.banner-container .banner-wrapper nav {
+  flex: 0 0 23%;
+}
+.banner-container .banner-wrapper nav h4 {
+  color: var(--color-dark-text);
+  margin-bottom: var(--space-36);
+}
+.banner-container .banner-wrapper nav li {
+  margin-bottom: var(--space-28);
+}
+.banner-container .banner-wrapper nav li a {
+  display: flex;
+  align-items: center;
+  font-family: "Basier Bold";
+  font-size: var(--fs-26);
+  color: var(--color-dark-text-secondary);
+  line-height: 1;
+}
+.banner-container .banner-wrapper nav li a img {
+  margin-right: var(--space-22);
+}
+@media (max-width: 990px) {
+  .banner-container .banner-wrapper nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--main-nav-height-offset);
+    flex: 0 0 100%;
+    z-index: 100;
+    background-color: var(--color-background-grey);
+  }
+  .banner-container .banner-wrapper nav h4 {
+    display: none;
+  }
+  .banner-container .banner-wrapper nav ul {
+    width: 100%;
+    max-width: 1650px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 990px) and (min-width: 620px) {
+  .banner-container .banner-wrapper nav ul {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (max-width: 990px) and (min-width: 1280px) {
+  .banner-container .banner-wrapper nav ul {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+  }
+}
+@media (max-width: 990px) {
+  .banner-container .banner-wrapper nav ul::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 990px) {
+  .banner-container .banner-wrapper nav ul li {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+    margin-right: var(--space-28);
+  }
+  .banner-container .banner-wrapper nav ul li a {
+    color: var(--color-text);
+    font-size: var(--fs-18);
+  }
+  .banner-container .banner-wrapper nav ul li a img {
+    filter: invert(1);
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+.banner-container .banner-wrapper .hero-slider {
+  flex: 0 0 75%;
+}
+.banner-container .banner-wrapper .hero-slider .slideshow-container {
+  position: relative;
+}
+@media (max-width: 990px) {
+  .banner-container .banner-wrapper .hero-slider {
+    flex: 0 0 100%;
+  }
+}
+
+.slides {
+  border-radius: var(--border-radius-large);
+  height: var(--hero-banner-height);
+  background-image: var(--image-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: fade;
+  animation-duration: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slides .slide-text {
+  text-align: center;
+}
+.slides .slide-title {
+  font-family: "Basier Bold", Helvetica, Arial, Lucida, sans-serif;
+  font-size: var(--fs-48);
+  padding-bottom: var(--space-14);
+  line-height: 1em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.slides .slide-description {
+  font-size: var(--fs-20);
+  line-height: 1.8em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: var(--space-48);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slideInUp {
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+  animation-name: slideInUp;
+  animation-duration: 1s;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.slideshow-container:hover .arrow-prev {
+  opacity: 1;
+  left: 22px;
+}
+
+.slideshow-container:hover .arrow-next {
+  opacity: 1;
+  right: 22px;
+}
+
+.arrow-prev {
+  left: -22px;
+}
+
+.arrow-next {
+  right: -22px;
+}
+
+.arrow-prev:before {
+  content: "4";
+  font-family: ETmodules !important;
+  font-weight: 400;
+  text-shadow: 0 0;
+  direction: ltr;
+}
+
+.arrow-next:before {
+  content: "5";
+  font-family: ETmodules !important;
+  font-weight: 400;
+  text-shadow: 0 0;
+  direction: ltr;
+}
+
+.arrow-prev,
+.arrow-next {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  font-size: 48px;
+  color: #fff;
+  margin-top: -24px;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.casino-list-container {
+  width: 100%;
+  max-width: 1650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: var(--space-44);
+  padding-bottom: var(--space-22);
+}
+@media only screen and (min-width: 620px) {
+  .casino-list-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .casino-list-container {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+  }
+}
+@media (max-width: 990px) {
+  .casino-list-container {
+    padding-top: var(--space-145);
+  }
+}
+.casino-list-container .casino-display-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.casino-list-container .casino-display-wrapper nav {
+  flex: 0 0 23%;
+}
+.casino-list-container .casino-display-wrapper nav h4 {
+  color: var(--color-dark-text);
+  margin-bottom: var(--space-36);
+}
+.casino-list-container .casino-display-wrapper nav li {
+  margin-bottom: var(--space-18);
+}
+.casino-list-container .casino-display-wrapper nav li a {
+  display: block;
+  background-color: var(--color-background-grey);
+  border-radius: var(--border-radius);
+  font-size: var(--fs-20);
+  color: var(--color-text);
+  font-family: "Basier Bold";
+  padding: var(--space-18) var(--space-28);
+  transition: background-color 0.3s;
+}
+.casino-list-container .casino-display-wrapper nav li a:hover {
+  background-color: var(--color-dark-text-secondary);
+}
+@media (max-width: 990px) {
+  .casino-list-container .casino-display-wrapper nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--main-nav-height-offset);
+    flex: 0 0 100%;
+    z-index: 100;
+    background-color: var(--color-background-grey);
+  }
+  .casino-list-container .casino-display-wrapper nav h4 {
+    display: none;
+  }
+  .casino-list-container .casino-display-wrapper nav ul {
+    width: 100%;
+    max-width: 1650px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 990px) and (min-width: 620px) {
+  .casino-list-container .casino-display-wrapper nav ul {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media only screen and (max-width: 990px) and (min-width: 1280px) {
+  .casino-list-container .casino-display-wrapper nav ul {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+  }
+}
+@media (max-width: 990px) {
+  .casino-list-container .casino-display-wrapper nav ul::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 990px) {
+  .casino-list-container .casino-display-wrapper nav ul li {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+    margin-right: var(--space-28);
+  }
+}
+.casino-list-container .casino-display-wrapper .casino-list {
+  flex: 0 0 75%;
+  width: 75%;
+}
+@media (max-width: 990px) {
+  .casino-list-container .casino-display-wrapper .casino-list {
+    flex: 0 0 100%;
+  }
+}
+.casino-list-container .casino-display-wrapper .casino-list h1 {
+  font-size: var(--fs-48);
+  color: var(--color-background-grey);
+  margin-bottom: var(--space-14);
+  font-family: "Basier Bold";
+}
+.casino-list-container .casino-display-wrapper .casino-list span.tagline {
+  font-family: "Basier Bold";
+  color: var(--color-dark-text-secondary);
+  line-height: 1.5;
+  font-size: var(--fs-26);
+  height: 4rem;
+  max-width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.casino-list-container .casino-display-wrapper .casino-list span.tagline.expanded {
+  height: auto;
+  -webkit-line-clamp: unset;
+}
+.casino-list-container .casino-display-wrapper .casino-list .center-content {
+  text-align: center;
+}
+.casino-list-container .casino-display-wrapper .casino-list .center-content a {
+  color: var(--color-background-grey);
+  display: block;
+  text-decoration: underline;
+  padding-top: var(--space-25);
+  transition: color 0.3s;
+}
+.casino-list-container .casino-display-wrapper .casino-list .center-content a:hover {
+  color: var(--color-dark-text-secondary);
+}
+.casino-list-container .casino-display-wrapper .casino-list .casino-list-cards {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: var(--space-66);
+}
+.casino-list-container .casino-display-wrapper .casino-list .casino-list-cards .card-full {
+  flex: 0 0 calc(50% - var(--space-20));
+  width: calc(50% - var(--space-20));
+  margin-bottom: var(--space-40);
+}
+
+.card-full {
+  color: var(--color-text);
+}
+.card-full .card-container {
+  background-color: var(--color-background-grey);
+  border-radius: var(--border-radius);
+  padding: var(--space-25);
+  display: flex;
+  flex-direction: column;
+}
+.card-full .card-container .card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.card-full .card-container .card-header > a > img {
+  max-width: 100px;
+  height: 100px;
+  border-radius: var(--border-radius);
+}
+.card-full .card-container .card-header .card-header-details {
+  margin-left: var(--space-25);
+}
+.card-full .card-container .card-header .card-header-details a h3 {
+  font-size: var(--fs-32);
+  color: var(--color-text);
+  font-family: "Basier Bold";
+}
+.card-full .card-container .card-tags {
+  margin-top: var(--space-22);
+  min-height: 48px;
+}
+.card-full .card-container .card-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: var(--space-14);
+  margin-bottom: var(--space-10);
+}
+.card-full .card-container .card-features .feature-review {
+  flex: 0 0 calc(50% - var(--space-8));
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-12);
+  margin-bottom: var(--space-4);
+}
+.card-full .card-container .card-features .feature-review img {
+  margin-right: var(--space-8);
+}
+.card-full .card-container .card-offer-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--space-18);
+  margin-bottom: var(--space-32);
+}
+.card-full .card-container .card-offer-info .card-offer {
+  flex: 0 0 25%;
+}
+.card-full .card-container .card-offer-info .card-offer .offer-title {
+  display: block;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-size: var(--fs-12);
+}
+.card-full .card-container .card-offer-info .card-offer .offer-description {
+  font-size: var(--fs-26);
+  font-family: "Basier Bold";
+}
+.card-full .card-container .card-additional-details .center-content a {
+  color: var(--color-text);
+}
+.card-full .card-container .card-additional-details .center-content a:hover {
+  color: var(--color-text-secondary);
+}
+.card-full .card-container .card-additional-details .card-additional-details-content {
+  display: none;
+}
+.card-full .card-container .card-additional-details .card-additional-details-content.expanded {
+  display: block;
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .additional-details-list {
+  padding-top: var(--space-36);
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .additional-details-list .details {
+  background-color: var(--color-background-grey);
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .additional-details-list .details .bonus-element {
+  margin-bottom: var(--space-28);
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .additional-details-list .details .bonus-element:last-of-type {
+  margin-bottom: 0;
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .additional-details-list .details .bonus-element .step-title {
+  font-size: var(--fs-26);
+  font-family: "Basier Bold";
+  margin-bottom: var(--space-14);
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .additional-details-list .details .bonus-element .step-detail {
+  display: inline-block;
+  border: 1px solid var(--color-text);
+  color: var(--color-text-secondary);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .card-description {
+  padding-top: var(--space-36);
+  padding-bottom: var(--space-20);
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .est-year label {
+  display: block;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .est-year span {
+  font-size: var(--fs-26);
+  font-family: "Basier Bold";
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .card-link {
+  padding-top: var(--space-20);
+}
+.card-full .card-container .card-additional-details .card-additional-details-content .card-link a {
+  color: var(--color-text);
+  text-decoration: underline;
 }
