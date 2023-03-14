@@ -6,8 +6,8 @@
         <?php get_template_part('template-parts/home-page/banner'); ?>
         <?php get_template_part('template-parts/home-page/casino-display'); ?>
     </section>
-    <section class="content-container">
-
+    <section class="page-wrapper dark page-wrapper-home">
+        <?php get_template_part( 'template-parts/common/content-full-width' ); ?>
     </section>
 </div>
 
