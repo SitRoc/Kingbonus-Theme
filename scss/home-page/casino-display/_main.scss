@@ -76,7 +76,7 @@
                 color: var(--color-dark-text-secondary);
                 line-height: 1.5;
                 font-size: var(--fs-26);
-                height: 4.5rem;
+                height: 4rem;
                 max-width: 100%;
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
@@ -124,8 +124,6 @@
         padding: var(--space-25);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
         .card-header{
             display: flex;
             flex-wrap: wrap;
@@ -185,6 +183,50 @@
                 .offer-description{
                     font-size: var(--fs-26);
                     font-family: 'Basier Bold';
+                }
+            }
+        }
+        .card-additional-details{
+            .center-content{
+                a{
+                    color: var(--color-text);
+                    &:hover{
+                        color: var(--color-text-secondary);
+                    }
+                }
+            }
+            .card-additional-details-content{
+                display: none;
+                &.expanded{
+                    display: block;
+                }
+                .additional-details-list{
+                    padding-top: var(--space-36);
+                    .details{
+                        @include details();
+                    }
+                }
+                .card-description{
+                    padding-top: var(--space-36);
+                    padding-bottom: var(--space-20);
+                }
+                .est-year{
+                    label{
+                        display: block;
+                        text-transform: uppercase;
+                        color: var(--color-text-secondary);
+                    }
+                    span{
+                        font-size: var(--fs-26);
+                        font-family: 'Basier Bold';
+                    }
+                }
+                .card-link{
+                    padding-top: var(--space-20);
+                    a{
+                        color: var(--color-text);
+                        text-decoration: underline;
+                    }
                 }
             }
         }

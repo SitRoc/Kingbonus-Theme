@@ -71,10 +71,68 @@ $BonusFeature4 = ($bonusFeatures['feat4']) ? $bonusFeatures['feat4'] : 'test';
             </div>
         </div>
         <div class="card-button">
-            <a href="<?php echo $Link; ?>" title="Hent bonus fra <?php the_title(); ?>" target="_blank" class="button-3" rel="nofollow">Hent Bonus</a>
+            <a href="<?php echo $Link; ?>" title="Hent bonus fra <?php the_title(); ?>" target="_blank" class="button-3" rel="nofollow"><?php the_field('bonus_link_text_for_homepage_cards', 'option'); ?></a>
         </div>
         <div class="card-additional-details">
-            
+            <div class="js-expand-container">
+                <div class="center-content">
+                    <a 
+                        class="js-expand-trigger card-expand-button" 
+                        href="javascript:;" id="mt-button" 
+                        primary_text="<?php the_field('expand_text_for_homepage_cards', 'option'); ?>"
+                        alt_text="<?php the_field('contract_text_for_homepage_cards', 'option'); ?>">
+                        <?php the_field('expand_text_for_homepage_cards', 'option'); ?>
+                    </a>
+                </div>
+                <div class="card-additional-details-content js-expand-section">
+                    <div class="additional-details-list">
+                        <div class="details">
+                            <?php
+                            // Loop through a repeater field called details
+                            if( have_rows('details') ):
+                                while ( have_rows('details') ) : the_row();
+                                    $title = get_sub_field('detail_group_title');
+                                    ?>
+                                    <div class="bonus-element">
+                                        <div class="step-title"> <?php echo $title; ?>: </div>
+                                        <?php
+                                        // Loop through a repeater sub field called detail_tags
+                                        if( have_rows('detail_tags') ):
+                                            while ( have_rows('detail_tags') ) : the_row();
+                                                $detail = get_sub_field('detail');
+                                                ?>
+                                                <span class="step-detail"><?php echo $detail; ?></span>
+                                                <?php
+                                            endwhile;
+                                        endif;
+                                        ?>
+                                    </div>
+                                    <?php
+                                endwhile;
+                            endif;
+                            ?>
+                        </div>
+                    </div>
+                    <div class="card-description">
+                        <?php the_field('short_description'); ?>
+                    </div>
+                    <div class="est-year">
+                        <label for="">Established Year</label>
+                        <span><?php
+                        $established_year = get_field('established_year');
+                        if ($established_year){
+                            $date = DateTime::createFromFormat('d/m/Y', $established_year);
+                            echo $date->format('Y');
+                        }
+                        ?></span>
+                    </div>
+                    <div class="card-link">
+                        <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                            <?php the_title(); ?> Review
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
